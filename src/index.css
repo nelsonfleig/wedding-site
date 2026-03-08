@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Cormorant", serif;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-700 bg-white antialiased;
+    line-height: 1.6;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-gray-900;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl font-medium;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-medium;
+  }
+
+  h3 {
+    @apply text-2xl font-medium;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  /* Paragraphs */
+  p {
+    @apply text-base md:text-lg;
+    line-height: 1.7;
+  }
+
+  /* Links */
+  a {
+    @apply underline-offset-4 transition-colors;
+  }
+
+  a:hover {
+    @apply text-blue-600;
+  }
+
+  /* Lists */
+  ul {
+    @apply list-disc ml-6 space-y-2;
+  }
+
+  /* Images */
+  img {
+    @apply rounded-lg;
+  }
+}
