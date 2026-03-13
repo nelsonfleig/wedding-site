@@ -123,7 +123,7 @@ const RSVP = () => {
         </motion.h2>
 
         <motion.p variants={fadeUp} className="mb-10">
-          Please let us know if you'll be joining us.
+          Confirma tu presencia
         </motion.p>
 
         {/* Loading */}

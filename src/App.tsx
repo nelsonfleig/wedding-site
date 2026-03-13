@@ -7,19 +7,21 @@ import Location from "./components/Location";
 import Gifts from "./components/Gifts";
 import RSVP from "./components/RSVP";
 import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 
 export default function App() {
   return (
     <div className="text-gray-700">
       <Hero />
       <Invitation />
-      <OurStory />
       <Details />
-      <Schedule />
-      <Location />
+      <OurStory />
       <Gifts />
       <RSVP />
       <Footer />
+      <Location />
+      <Schedule />
+      <Gallery />
     </div>
   );
 }

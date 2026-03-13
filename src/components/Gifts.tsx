@@ -11,7 +11,7 @@ const Gifts = () => {
       viewport={{ once: true, margin: "-100px" }}
     >
       <motion.h2 variants={fadeUp} className="mb-8">
-        Lista de regalos
+        Sugerencia de regalo
       </motion.h2>
 
       <motion.p variants={fadeUp} className="mb-12">
@@ -22,15 +22,20 @@ const Gifts = () => {
 
       <div className="grid md:grid-cols-2 gap-12">
         <motion.div variants={fadeUp}>
+          <h3 className="mb-4">Bizum</h3>
+          <p>+34 625995539</p>
+        </motion.div>
+
+        <motion.div variants={fadeUp}>
           <h3 className="mb-4">PayPal</h3>
-          <p>correo@ejemplo.com</p>
+          <p>nelson.fleig@gmail.com</p>
         </motion.div>
 
         <motion.div variants={fadeUp}>
           <h3 className="mb-4">Transferencia bancaria</h3>
           <p>Banco: XXXX</p>
           <p>IBAN: ES00 0000 0000 0000 0000 0000</p>
-          <p>Titular: María Paula & Nelson</p>
+          <p>María Paula Baldiviezo Peredo</p>
         </motion.div>
       </div>
     </motion.section>

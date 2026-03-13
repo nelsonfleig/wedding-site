@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
-import tiles from "../assets/illustrations/IMG_7098.png";
 import tileOranges from "../assets/illustrations/IMG_7089.png";
 
 const Details = () => {
@@ -12,12 +11,6 @@ const Details = () => {
       whileInView="show"
       viewport={{ once: true }}
     >
-      <img
-        src={tiles}
-        alt=""
-        aria-hidden="true"
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 md:w-80 lg:w-[28rem] pointer-events-none select-none rounded-none"
-      />
       <img
         src={tileOranges}
         alt=""
@@ -32,9 +25,20 @@ const Details = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div variants={fadeUp}>
+            <h3 className="mb-4">Preboda</h3>
+            <p>Septiembre 10, 20:30</p>
+            <p>La Primera del Puente</p>
+            <p>Septiembre 10</p>
+            <a href="https://maps.google.com" className="underline">
+              Ver en el mapa
+            </a>
+          </motion.div>
+
+          <motion.div variants={fadeUp}>
             <h3 className="mb-4">Ceremonia</h3>
-            <p>17:30</p>
+            <p>Septiembre 11, 17:30</p>
             <p>Iglesia de Santa María la Blanca</p>
+            <p>Septiembre 11</p>
             <a href="https://maps.google.com" className="underline">
               Ver en el mapa
             </a>
@@ -42,7 +46,7 @@ const Details = () => {
 
           <motion.div variants={fadeUp}>
             <h3 className="mb-4">Recepción</h3>
-            <p>19:00</p>
+            <p>Septiembre 11, 19:00</p>
             <p>El 29 Restaurante</p>
             <p>Vestimenta formal</p>
             <a href="https://maps.google.com" className="underline">
