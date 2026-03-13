@@ -10,13 +10,13 @@ const Schedule = () => {
         src={lobster}
         alt=""
         aria-hidden="true"
-        className="absolute -top-4 -left-4 w-24 md:w-36 lg:w-44 pointer-events-none select-none rounded-none opacity-30"
+        className="absolute -top-4 -left-4 w-24 md:w-36 lg:w-44 pointer-events-none select-none rounded-none"
       />
       <img
         src={cocktails}
         alt=""
         aria-hidden="true"
-        className="absolute -bottom-4 right-4 md:right-12 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none opacity-40"
+        className="absolute -bottom-4 right-4 md:right-12 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"
       />
 
       <motion.section
@@ -26,7 +26,7 @@ const Schedule = () => {
         whileInView="show"
         viewport={{ once: true }}
       >
-        <motion.h2 variants={fadeUp} className="font-serif text-6xl mb-10">
+        <motion.h2 variants={fadeUp} className="mb-10">
           Schedule
         </motion.h2>
 

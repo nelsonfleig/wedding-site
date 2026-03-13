@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
 import type { Guest, RsvpResponse, RsvpSubmission } from "../types";
-import vases from "../assets/illustrations/IMG_7094.png";
-import fan from "../assets/illustrations/IMG_7086.png";
 
 const APPS_SCRIPT_URL = import.meta.env.VITE_APPS_SCRIPT_URL as string;
 
@@ -113,27 +111,14 @@ const RSVP = () => {
 
   return (
     <motion.section
-      className="relative bg-gray-50 py-20 px-6 overflow-hidden"
+      className="relative py-20 px-6 overflow-hidden"
       variants={stagger}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
     >
-      <img
-        src={fan}
-        alt=""
-        aria-hidden="true"
-        className="absolute -bottom-4 -left-4 w-24 md:w-36 lg:w-44 pointer-events-none select-none rounded-none opacity-30"
-      />
-      <img
-        src={vases}
-        alt=""
-        aria-hidden="true"
-        className="absolute -bottom-4 -right-4 w-20 md:w-28 lg:w-36 pointer-events-none select-none rounded-none opacity-30"
-      />
-
       <div className="max-w-md mx-auto text-center relative z-10">
-        <motion.h2 variants={fadeUp} className="font-serif text-6xl mb-4">
+        <motion.h2 variants={fadeUp} className="mb-4">
           RSVP
         </motion.h2>
 

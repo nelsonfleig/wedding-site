@@ -7,8 +7,6 @@ import {
 import { useRef } from "react";
 import { fadeUp, stagger } from "../animations";
 import bouquet from "../assets/illustrations/IMG_7090.png";
-import hangingLeaves from "../assets/illustrations/illustration_2.jpg";
-import bottomLeaves from "../assets/illustrations/illustration_1.jpg";
 
 interface TimelineEvent {
   year: string;
@@ -61,25 +59,17 @@ const OurStory = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Top botanical border */}
-      <img
-        src={hangingLeaves}
-        alt=""
-        aria-hidden="true"
-        className="w-full pointer-events-none select-none"
-      />
-
       {/* Bouquet decoration */}
       <img
         src={bouquet}
         alt=""
         aria-hidden="true"
-        className="absolute -bottom-8 right-4 md:right-12 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none opacity-50"
+        className="absolute -bottom-8 right-4 md:right-12 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"
       />
 
       <section className="max-w-4xl mx-auto px-6 py-20 relative z-10">
         <motion.h2
-          className="font-serif text-6xl text-center mb-16"
+          className="text-center mb-16"
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
@@ -130,10 +120,8 @@ const OurStory = () => {
                     <span className="font-serif text-2xl text-gray-900">
                       {event.year}
                     </span>
-                    <h3 className="font-serif text-3xl mt-1">{event.title}</h3>
-                    <p className="text-base text-gray-600 mt-3">
-                      {event.description}
-                    </p>
+                    <h3 className="text-3xl mt-1">{event.title}</h3>
+                    <p className="mt-3">{event.description}</p>
                   </motion.div>
 
                   {/* Image placeholder */}
@@ -161,14 +149,6 @@ const OurStory = () => {
           })}
         </div>
       </section>
-
-      {/* Bottom botanical border */}
-      <img
-        src={bottomLeaves}
-        alt=""
-        aria-hidden="true"
-        className="w-full pointer-events-none select-none"
-      />
     </div>
   );
 };

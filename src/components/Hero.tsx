@@ -1,31 +1,43 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import orangeBlossoms from "../assets/illustrations/IMG_7099.png";
 import orangeBranch from "../assets/illustrations/IMG_7095.png";
+import { fadeUp } from "../animations";
 
 export default function Hero() {
+  const [fontsReady, setFontsReady] = useState(false);
+
+  useEffect(() => {
+    document.fonts.ready.then(() => setFontsReady(true));
+  }, []);
+
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center text-center px-6 overflow-hidden">
+    <section className="relative min-h-[100svh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
       <img
         src={orangeBlossoms}
         alt=""
         aria-hidden="true"
-        className="absolute top-0 left-0 w-40 md:w-56 lg:w-72 pointer-events-none select-none rounded-none opacity-70"
+        className="absolute top-0 left-0 w-56 md:w-72 lg:w-96 pointer-events-none select-none rounded-none"
       />
       <img
         src={orangeBranch}
         alt=""
         aria-hidden="true"
-        className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none opacity-70"
+        className="absolute bottom-0 right-0 w-32 md:w-44 lg:w-56 pointer-events-none select-none rounded-none"
       />
-
-      <motion.h1
-        className="relative z-10 font-serif text-6xl md:text-7xl lg:text-8xl text-gray-900 tracking-wide"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={fontsReady ? { opacity: 1 } : undefined}
         transition={{ duration: 1 }}
+        variants={fadeUp}
       >
-        María Paula & Nelson
-      </motion.h1>
+        <h1 className="relative z-10 text-6xl md:text-7xl lg:text-8xl tracking-wide mb-6">
+          María Paula & Nelson
+        </h1>
+
+        <p className="mb-2">11 de Septiembre 2026</p>
+        <p className="mb-2">Sevilla · España</p>
+      </motion.div>
     </section>
   );
 }

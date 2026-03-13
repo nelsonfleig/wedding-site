@@ -1,25 +1,25 @@
 import Hero from "./components/Hero";
+import Invitation from "./components/Invitation";
 import OurStory from "./components/OurStory";
 import Details from "./components/Details";
-import RSVP from "./components/RSVP";
-import Gallery from "./components/Gallery";
-import Location from "./components/Location";
 import Schedule from "./components/Schedule";
+import Location from "./components/Location";
+import Gifts from "./components/Gifts";
+import RSVP from "./components/RSVP";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="bg-white text-gray-700 font-sans">
+    <div className="text-gray-700">
       <Hero />
+      <Invitation />
       <OurStory />
       <Details />
       <Schedule />
       <Location />
-      <Gallery />
+      <Gifts />
       <RSVP />
-      {/* FOOTER */}
-      <footer className="text-center py-12 text-gray-500">
-        <p>Made with 💙 for our wedding</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
