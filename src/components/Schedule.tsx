@@ -10,7 +10,7 @@ const Schedule = () => {
       whileInView="show"
       viewport={{ once: true }}
     >
-      <motion.h2 variants={fadeUp} className="font-serif text-4xl mb-10">
+      <motion.h2 variants={fadeUp} className="font-serif text-6xl mb-10">
         Schedule
       </motion.h2>
 

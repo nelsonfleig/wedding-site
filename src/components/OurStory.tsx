@@ -10,7 +10,7 @@ const OurStory = () => {
       whileInView="show"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <motion.h2 variants={fadeUp} className="font-serif text-4xl mb-8">
+      <motion.h2 variants={fadeUp} className="font-serif text-6xl mb-8">
         Our Story
       </motion.h2>
 

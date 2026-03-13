@@ -10,7 +10,7 @@ const Location = () => {
       whileInView="show"
       viewport={{ once: true }}
     >
-      <h2 className="font-serif text-4xl mb-6">Location</h2>
+      <h2 className="font-serif text-6xl mb-6">Location</h2>
 
       <p className="mb-6">Masia Egara · Terrassa · Spain</p>
 

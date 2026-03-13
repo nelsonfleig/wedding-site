@@ -12,7 +12,7 @@ const Gallery = () => {
     >
       <motion.h2
         variants={fadeUp}
-        className="font-serif text-4xl text-center mb-12"
+        className="font-serif text-6xl text-center mb-12"
       >
         Gallery
       </motion.h2>

@@ -30,20 +30,20 @@ const Details = () => {
       viewport={{ once: true }}
     >
       <div className="max-w-4xl mx-auto text-center">
-        <motion.h2 variants={fadeUp} className="font-serif text-4xl mb-12">
+        <motion.h2 variants={fadeUp} className="font-serif text-6xl mb-12">
           Wedding Details
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div variants={fadeUp}>
-            <h3 className="font-serif text-2xl mb-4">Ceremony</h3>
+            <h3 className="font-serif text-4xl mb-4">Ceremony</h3>
             <p>4:00 PM</p>
             <p>Santa Maria del Mar</p>
             <p>Barcelona, Spain</p>
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <h3 className="font-serif text-2xl mb-4">Reception</h3>
+            <h3 className="font-serif text-4xl mb-4">Reception</h3>
             <p>6:30 PM</p>
             <p>Masia Egara</p>
             <p>Terrassa, Spain</p>

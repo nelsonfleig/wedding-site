@@ -10,7 +10,7 @@ const RSVP = () => {
       whileInView="show"
       viewport={{ once: true }}
     >
-      <h2 className="font-serif text-4xl mb-8">RSVP</h2>
+      <h2 className="font-serif text-6xl mb-8">RSVP</h2>
 
       <p className="mb-8">Please let us know if you’ll be joining us.</p>
 
