@@ -1,4 +1,6 @@
 import { motion, type Variants } from "framer-motion";
+import tiles from "../assets/illustrations/IMG_7098.png";
+import tileOranges from "../assets/illustrations/IMG_7089.png";
 
 const stagger: Variants = {
   hidden: {},
@@ -20,16 +22,30 @@ const fadeUp: Variants = {
     },
   },
 };
+
 const Details = () => {
   return (
     <motion.section
-      className="bg-gray-50 py-20 px-6"
+      className="relative bg-gray-50 py-20 px-6 overflow-hidden"
       variants={stagger}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <img
+        src={tiles}
+        alt=""
+        aria-hidden="true"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 md:w-80 lg:w-[28rem] pointer-events-none select-none rounded-none opacity-20"
+      />
+      <img
+        src={tileOranges}
+        alt=""
+        aria-hidden="true"
+        className="absolute -bottom-4 -right-4 w-28 md:w-40 lg:w-52 pointer-events-none select-none rounded-none opacity-25"
+      />
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h2 variants={fadeUp} className="font-serif text-6xl mb-12">
           Wedding Details
         </motion.h2>

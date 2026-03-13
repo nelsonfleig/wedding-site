@@ -1,38 +1,31 @@
 import { motion } from "framer-motion";
+import orangeBlossoms from "../assets/illustrations/IMG_7099.png";
+import orangeBranch from "../assets/illustrations/IMG_7095.png";
 
 export default function Hero() {
   return (
-    <section className="min-h-[100svh] flex items-center justify-center text-center px-6">
-      <div className="max-w-2xl">
-        {/* Top floral decoration */}
-        <motion.img
-          src="https://picsum.photos/seed/flower1/600/200"
-          alt="floral decoration"
-          className="mx-auto mb-10 opacity-80"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 0.8, y: 0 }}
-          transition={{ duration: 1 }}
-        />
+    <section className="relative min-h-[100svh] flex items-center justify-center text-center px-6 overflow-hidden">
+      <img
+        src={orangeBlossoms}
+        alt=""
+        aria-hidden="true"
+        className="absolute top-0 left-0 w-40 md:w-56 lg:w-72 pointer-events-none select-none rounded-none opacity-70"
+      />
+      <img
+        src={orangeBranch}
+        alt=""
+        aria-hidden="true"
+        className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none opacity-70"
+      />
 
-        <motion.h1
-          className="font-serif text-6xl md:text-7xl lg:text-8xl mt-6 text-gray-900 tracking-wide"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          María Paula & Nelson
-        </motion.h1>
-
-        {/* Bottom floral decoration */}
-        <motion.img
-          src="https://picsum.photos/seed/flower2/600/200"
-          alt="floral decoration"
-          className="mx-auto mt-12 opacity-80"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 0.8, y: 0 }}
-          transition={{ delay: 1.2, duration: 1 }}
-        />
-      </div>
+      <motion.h1
+        className="relative z-10 font-serif text-6xl md:text-7xl lg:text-8xl text-gray-900 tracking-wide"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        María Paula & Nelson
+      </motion.h1>
     </section>
   );
 }
