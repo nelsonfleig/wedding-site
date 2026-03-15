@@ -36,7 +36,10 @@ const Details = () => {
             <p>Septiembre 10</p>
             <p>20:30</p>
             <p>La Primera del Puente</p>
-            <a href="https://maps.google.com" className="underline">
+            <a
+              href="https://maps.app.goo.gl/Yvi5yntmJpP4fA5T8"
+              className="underline"
+            >
               Ver en el mapa
             </a>
           </motion.div>
@@ -46,7 +49,10 @@ const Details = () => {
             <p>Septiembre 11</p>
             <p>17:30</p>
             <p>Iglesia de Santa María la Blanca</p>
-            <a href="https://maps.google.com" className="underline">
+            <a
+              href="https://maps.app.goo.gl/74TArisYqSTXMZ3g8"
+              className="underline"
+            >
               Ver en el mapa
             </a>
           </motion.div>
@@ -57,7 +63,10 @@ const Details = () => {
             <p>19:00</p>
             <p>El 29 Restaurante</p>
             <p>Vestimenta formal</p>
-            <a href="https://maps.google.com" className="underline">
+            <a
+              href="https://maps.app.goo.gl/YApmRcW7kM69d2Zr8"
+              className="underline"
+            >
               Ver en el mapa
             </a>
           </motion.div>
