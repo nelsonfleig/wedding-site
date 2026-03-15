@@ -23,7 +23,7 @@ const Gifts = () => {
       <div className="grid md:grid-cols-2 gap-12">
         <motion.div variants={fadeUp}>
           <h3 className="mb-4">Bizum</h3>
-          <p>+34 625995539</p>
+          <p>+34 625 99 55 39</p>
         </motion.div>
 
         <motion.div variants={fadeUp}>

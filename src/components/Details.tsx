@@ -26,9 +26,9 @@ const Details = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div variants={fadeUp}>
             <h3 className="mb-4">Preboda</h3>
-            <p>Septiembre 10, 20:30</p>
-            <p>La Primera del Puente</p>
             <p>Septiembre 10</p>
+            <p>20:30</p>
+            <p>La Primera del Puente</p>
             <a href="https://maps.google.com" className="underline">
               Ver en el mapa
             </a>
@@ -36,9 +36,9 @@ const Details = () => {
 
           <motion.div variants={fadeUp}>
             <h3 className="mb-4">Ceremonia</h3>
-            <p>Septiembre 11, 17:30</p>
-            <p>Iglesia de Santa María la Blanca</p>
             <p>Septiembre 11</p>
+            <p>17:30</p>
+            <p>Iglesia de Santa María la Blanca</p>
             <a href="https://maps.google.com" className="underline">
               Ver en el mapa
             </a>
@@ -46,7 +46,8 @@ const Details = () => {
 
           <motion.div variants={fadeUp}>
             <h3 className="mb-4">Recepción</h3>
-            <p>Septiembre 11, 19:00</p>
+            <p>Septiembre 11</p>
+            <p>19:00</p>
             <p>El 29 Restaurante</p>
             <p>Vestimenta formal</p>
             <a href="https://maps.google.com" className="underline">

@@ -23,14 +23,14 @@ const Invitation = () => {
       </motion.h2>
 
       <motion.p variants={fadeUp}>
-        Con mucha ilusión, queremos compartir con ustedes uno de los días más
-        importantes de nuestras vidas. Nos encantaría contar con su presencia
-        para celebrar juntos este nuevo comienzo.
+        Nos complace compartir con ustedes uno de los días más importantes de
+        nuestras vidas. Nos encantaría contar con su presencia para celebrar
+        juntos nuestra unión ante Dios.
       </motion.p>
 
       <motion.p variants={fadeUp} className="mt-6">
         Será una noche llena de amor, risas y buena compañía. Los esperamos con
-        los brazos abiertos.
+        los brazos abiertos y mucha ilusión.
       </motion.p>
     </motion.section>
   );

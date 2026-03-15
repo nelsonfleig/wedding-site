@@ -37,7 +37,7 @@
   }
 
   body {
-    @apply font-sans text-gray-600 bg-eggshell antialiased;
+    @apply font-sans font-light text-gray-600 bg-eggshell antialiased;
     line-height: 1.7;
   }
 
