@@ -1,7 +1,7 @@
 import { illustrations } from "../constants";
 const Footer = () => {
   return (
-    <footer className="relative text-center py-12 text-gray-500">
+    <footer className="relative text-center py-12 pb-20 text-gray-500 overflow-hidden">
       <img
         src={illustrations.fan}
         alt=""

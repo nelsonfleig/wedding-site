@@ -5,7 +5,7 @@ import { illustrations } from "../constants";
 const Gifts = () => {
   return (
     <motion.section
-      className="relative max-w-3xl mx-auto px-6 py-20 pb-30 text-center"
+      className="relative max-w-3xl mx-auto px-6 py-20 pb-30 text-center overflow-hidden"
       variants={stagger}
       initial="hidden"
       whileInView="show"
@@ -15,7 +15,7 @@ const Gifts = () => {
         src={illustrations.tileOranges}
         alt=""
         aria-hidden="true"
-        className="absolute bottom-0 -right-4 w-40 lg:w-52 pointer-events-none select-none rounded-none"
+        className="absolute bottom-0 right-0 w-40 lg:w-52 pointer-events-none select-none rounded-none"
       />
       <div className="space-y-12">
         <motion.h2 variants={fadeUp} className="mb-8">

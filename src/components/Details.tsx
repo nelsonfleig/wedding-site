@@ -15,7 +15,7 @@ const Details = () => {
         src={illustrations.lobster}
         alt=""
         aria-hidden="true"
-        className="absolute top-50 left-0 md:left-8 lg:left-16 w-24 md:w-36 lg:w-48 pointer-events-none select-none "
+        className="absolute top-0 left-0 md:left-8 lg:left-16 w-24 md:w-36 lg:w-48 pointer-events-none select-none"
       />
 
       <img

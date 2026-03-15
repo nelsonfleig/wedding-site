@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="overflow-x-hidden text-gray-700">
+    <div className="text-gray-700">
       <Hero />
       <Invitation />
       <Details />
