@@ -65,15 +65,6 @@ const RSVP = () => {
     setMessage("");
   };
 
-  const resetForm = () => {
-    setSelectedGuest(null);
-    setSearch("");
-    setAttending(null);
-    setGuestCount(1);
-    setMessage("");
-    setState("form");
-  };
-
   const handleSubmit = async () => {
     if (!selectedGuest || attending === null) return;
 
