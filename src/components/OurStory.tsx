@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { fadeUp, stagger } from "../animations";
 import peru from "../assets/photos/IMG_1345.jpg";
 import civil from "../assets/photos/IMG_5678.jpeg";
-import llaves from "../assets/photos/IMG_7724.jpeg";
+import pancho from "../assets/photos/IMG_6781.jpeg";
 import sevilla from "../assets/photos/IMG_9486.jpeg";
 import { illustrations } from "../constants";
 
@@ -21,31 +21,31 @@ interface TimelineEvent {
 
 const events: TimelineEvent[] = [
   {
-    year: "2019",
+    year: "2020",
     title: "Nos conocimos",
     description:
-      "Poco tiempo después de empezar a salir, nos lanzamos a una aventura juntos por Perú. Entre paisajes increíbles, comida deliciosa y muchas risas, confirmamos que no lo hacemos tan mal como pareja.",
+      "Fue en el Año Nuevo de 2020 cuando Nelson, buscando algo rico para comer, cayó como paracaidista en la fiesta de María Paula. Poco tiempo después de empezar a salir, nos lanzamos juntos a una aventura por Perúy entre paisajes increíbles, comida deliciosa y muchas risas, empezó a crecer el amor.",
     image: peru,
   },
   {
     year: "2022",
     title: "Boda civil",
     description:
-      "Cuando apareció una oportunidad laboral en Barcelona, no lo dudamos mucho: si tocaba cambiar de ciudad, lo haríamos juntos. Y así, entre maletas y nuevos comienzos, decidimos dar otro paso importante y casarnos por lo civil.",
+      "Cuando a Nelson le apareció una oportunidad laboral en Barcelona, no lo dudamos mucho: si tocaba cambiar de país, lo haríamos juntos. Y así, entre maletas y nuevos comienzos, decidimos dar otro paso importante y casarnos por lo civil.",
     image: civil,
   },
   {
-    year: "2022",
+    year: "2023",
     title: "Arribat a Barcelona",
     description:
-      "Nuestra primera etapa en Barcelona empezó en el Raval, mientras María Paula se dedicaba con paciencia (y mucha determinación) a la misión de encontrar nuestro hogar. Después de muchas visitas y búsquedas, llegó el gran momento: ¡las llaves de nuestro apartamento!",
-    image: llaves,
+      "Nuestra primera etapa en Barcelona empezó en el Raval, mientras María Paula se dedicaba con paciencia (y mucha determinación) a la misión de encontrar nuestro hogar. Después de muchas visitas y búsquedas, llegó el gran momento: ¡las llaves de nuestro apartamento! Y posteriormente llegó nuestro perro Pancho.",
+    image: pancho,
   },
   {
     year: "2025",
     title: "Peparando la boda",
     description:
-      "Tras recorrer media ciudad visitando iglesias y posibles lugares para celebrar, encontramos la respuesta lejos de Barcelona: Sevilla. Y así fue como decidimos el lugar donde celebraremos este nuevo capítulo de nuestra historia.",
+      "Pasaron los años y, ya establecidos en Barcelona, siempre tuvimos la ilusión de casarnos ante Dios y, sobre todo, en la ciudad más romántica de España: Sevilla. Tras recorrer media ciudad visitando iglesias y posibles lugares para celebrar, elegimos el lugar donde celebraremos este nuevo capítulo de nuestra historia.",
     image: sevilla,
   },
 ];
