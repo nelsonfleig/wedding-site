@@ -41,7 +41,7 @@ const Gifts = () => {
         <motion.div variants={fadeUp}>
           <h3 className="mb-4">Transferencia bancaria</h3>
           <p>Banco: Mercantil Santa Cruz</p>
-          <p>Cnta Bolivianos Ahorros 4067788562</p>
+          <p>Cta Ahorros (Bolivianos) 4067788562</p>
           <p>María Paula Baldiviezo</p>
           <p>CI 4707116 SC</p>
         </motion.div>

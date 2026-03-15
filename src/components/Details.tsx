@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
 import { illustrations } from "../constants";
+import { createICS } from "../utils";
+
+const DeviceCalendarIcon = () => (
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+  </svg>
+);
 
 const Details = () => {
   return (
@@ -48,7 +55,7 @@ const Details = () => {
             <h3 className="mb-4">Ceremonia</h3>
             <p>Septiembre 11</p>
             <p>17:30</p>
-            <p>Iglesia de Santa María la Blanca</p>
+            <p>Iglesia de Santa María La Blanca</p>
             <a
               href="https://maps.app.goo.gl/74TArisYqSTXMZ3g8"
               className="underline"
@@ -69,6 +76,31 @@ const Details = () => {
             >
               Ver en el mapa
             </a>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col justify-center items-center gap-4 pt-4"
+          >
+            <h3 className="mb-4">Guarda la fecha en tu calendario</h3>
+            <div className="flex flex-col items-center space-y-3 w-60">
+              <a
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Mar%C3%ADa+Paula+y+Nelson&dates=20260911T153000Z/20260911T230000Z&location=Sevilla%2C+Espa%C3%B1a&details=Nos+casamos%21+Te+esperamos+en+la+Iglesia+de+Santa+Mar%C3%ADa+la+Blanca+a+las+17%3A30."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition font-medium w-full"
+              >
+                <DeviceCalendarIcon />
+                Google
+              </a>
+              <button
+                onClick={createICS}
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 border bg-white border-gray-300 rounded-lg hover:bg-gray-100 transition font-medium w-full"
+              >
+                <DeviceCalendarIcon />
+                Dispositivo
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>

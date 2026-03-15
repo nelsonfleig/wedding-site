@@ -36,15 +36,6 @@ export default function Hero() {
 
         <p className="mb-2">11 de Septiembre 2026</p>
         <p className="mb-2">Sevilla · España</p>
-
-        <a
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Mar%C3%ADa+Paula+y+Nelson&dates=20260911T153000Z/20260911T230000Z&location=Sevilla%2C+Espa%C3%B1a&details=Nos+casamos%21+Te+esperamos+en+la+Iglesia+de+Santa+Mar%C3%ADa+la+Blanca+a+las+17%3A30."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition font-medium"
-        >
-          Añadir al calendario
-        </a>
       </motion.div>
     </section>
   );
