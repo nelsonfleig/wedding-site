@@ -82,7 +82,7 @@ const Details = () => {
             variants={fadeUp}
             className="flex flex-col justify-center items-center gap-4 pt-4"
           >
-            <h3 className="mb-4">Guarda la fecha en tu calendario</h3>
+            <h3 className="mb-4">Guárdalo en tu calendario</h3>
             <div className="flex flex-col items-center space-y-3 w-60">
               <a
                 href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Mar%C3%ADa+Paula+y+Nelson&dates=20260911T153000Z/20260911T230000Z&location=Sevilla%2C+Espa%C3%B1a&details=Nos+casamos%21+Te+esperamos+en+la+Iglesia+de+Santa+Mar%C3%ADa+la+Blanca+a+las+17%3A30."

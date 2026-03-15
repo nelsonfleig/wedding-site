@@ -96,7 +96,10 @@ const OurStory = () => {
             const isEven = index % 2 === 1;
 
             return (
-              <div key={event.year} className="relative mb-32 last:mb-0">
+              <div
+                key={event.year}
+                className="relative mb-24 md:mb-32 last:mb-0"
+              >
                 {/* Dot — scales in when the line reaches it at viewport center */}
                 <motion.div
                   className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gray-400 border-2 border-white z-10"
