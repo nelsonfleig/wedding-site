@@ -6,7 +6,11 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { fadeUp, stagger } from "../animations";
-import bouquet from "../assets/illustrations/IMG_7090.png";
+import peru from "../assets/photos/IMG_1345.jpg";
+import civil from "../assets/photos/IMG_5678.jpeg";
+import llaves from "../assets/photos/IMG_7724.jpeg";
+import sevilla from "../assets/photos/IMG_9486.jpeg";
+import { illustrations } from "../constants";
 
 interface TimelineEvent {
   year: string;
@@ -18,27 +22,31 @@ interface TimelineEvent {
 const events: TimelineEvent[] = [
   {
     year: "2019",
-    title: "We Met",
+    title: "Nos conocimos",
     description:
-      "A chance encounter that changed everything. What started as a casual conversation quickly turned into hours of talking, laughing, and discovering how much we had in common.",
+      "Poco tiempo después de empezar a salir, nos lanzamos a una aventura juntos por Perú. Entre paisajes increíbles, comida deliciosa y muchas risas, confirmamos que no lo hacemos tan mal como pareja.",
+    image: peru,
   },
   {
-    year: "2020",
-    title: "First Adventure",
+    year: "2022",
+    title: "Boda civil",
     description:
-      "Our first trip together took us somewhere unexpected. Navigating new places side by side, we realized we made the perfect travel partners.",
+      "Cuando apareció una oportunidad laboral en Barcelona, no lo dudamos mucho: si tocaba cambiar de ciudad, lo haríamos juntos. Y así, entre maletas y nuevos comienzos, decidimos dar otro paso importante y casarnos por lo civil.",
+    image: civil,
   },
   {
-    year: "2023",
-    title: "A New Chapter",
+    year: "2022",
+    title: "Arribat a Barcelona",
     description:
-      "We moved in together and started building a home filled with love, good food, and long conversations that never seem to end.",
+      "Nuestra primera etapa en Barcelona empezó en el Raval, mientras María Paula se dedicaba con paciencia (y mucha determinación) a la misión de encontrar nuestro hogar. Después de muchas visitas y búsquedas, llegó el gran momento: ¡las llaves de nuestro apartamento!",
+    image: llaves,
   },
   {
     year: "2025",
-    title: "The Proposal",
+    title: "Peparando la boda",
     description:
-      "On a quiet evening, surrounded by the warmth of our life together, the question was asked — and the answer was an easy yes.",
+      "Tras recorrer media ciudad visitando iglesias y posibles lugares para celebrar, encontramos la respuesta lejos de Barcelona: Sevilla. Y así fue como decidimos el lugar donde celebraremos este nuevo capítulo de nuestra historia.",
+    image: sevilla,
   },
 ];
 
@@ -58,15 +66,13 @@ const OurStory = () => {
   });
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Bouquet decoration */}
+    <div className="relative overflow-hidden pb-30">
       <img
-        src={bouquet}
+        src={illustrations.cocktails}
         alt=""
         aria-hidden="true"
-        className="absolute -bottom-8 right-4 md:right-12 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"
+        className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"
       />
-
       <section className="max-w-4xl mx-auto px-6 py-20 relative z-10">
         <motion.h2
           className="text-center mb-16"
@@ -75,7 +81,7 @@ const OurStory = () => {
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
         >
-          Our Story
+          Nuestra Historia
         </motion.h2>
 
         {/* Timeline */}

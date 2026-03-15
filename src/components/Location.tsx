@@ -1,6 +1,6 @@
 import { fadeUp } from "../animations";
 import { motion } from "framer-motion";
-import tower from "../assets/illustrations/IMG_7103.png";
+import { illustrations } from "../constants";
 
 const Location = () => {
   return (
@@ -12,10 +12,10 @@ const Location = () => {
       viewport={{ once: true }}
     >
       <img
-        src={tower}
+        src={illustrations.tower}
         alt=""
         aria-hidden="true"
-        className="absolute bottom-0 right-0 md:right-8 lg:right-16 w-24 md:w-36 lg:w-48 pointer-events-none select-none rounded-none"
+        className="absolute bottom-0 right-0 md:right-8 lg:right-16 w-24 md:w-36 lg:w-48 pointer-events-none select-none "
       />
 
       <div className="relative z-10">

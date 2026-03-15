@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
-import tiles from "../assets/illustrations/IMG_7098.png";
+import { illustrations } from "../constants";
 
 const Invitation = () => {
   return (
@@ -12,7 +12,7 @@ const Invitation = () => {
       viewport={{ once: true, margin: "-100px" }}
     >
       <img
-        src={tiles}
+        src={illustrations.tiles}
         alt=""
         aria-hidden="true"
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 md:w-80 lg:w-[28rem] pointer-events-none select-none rounded-none"

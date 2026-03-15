@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import orangeBlossoms from "../assets/illustrations/IMG_7099.png";
-import orangeBranch from "../assets/illustrations/IMG_7095.png";
 import { fadeUp } from "../animations";
+import { illustrations } from "../constants";
 
 export default function Hero() {
   const [fontsReady, setFontsReady] = useState(false);
@@ -14,13 +13,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
       <img
-        src={orangeBlossoms}
+        src={illustrations.orangeBlossoms}
         alt=""
         aria-hidden="true"
         className="absolute top-0 left-0 w-56 md:w-72 lg:w-96 pointer-events-none select-none rounded-none"
       />
       <img
-        src={orangeBranch}
+        src={illustrations.orangeBranch}
         alt=""
         aria-hidden="true"
         className="absolute bottom-0 right-0 w-32 md:w-44 lg:w-56 pointer-events-none select-none rounded-none"
@@ -31,7 +30,7 @@ export default function Hero() {
         transition={{ duration: 1 }}
         variants={fadeUp}
       >
-        <h1 className="relative z-10 text-6xl md:text-7xl lg:text-8xl tracking-wide mb-6">
+        <h1 className="relative z-10 text-7xl md:text-8xl lg:text-9xl tracking-wide mb-6">
           María Paula & Nelson
         </h1>
 

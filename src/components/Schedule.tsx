@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
-import lobster from "../assets/illustrations/IMG_7091.png";
-import cocktails from "../assets/illustrations/IMG_7102.png";
+import { illustrations } from "../constants";
 
 const Schedule = () => {
   return (
     <div className="relative overflow-hidden">
       <img
-        src={lobster}
+        src={illustrations.lobster}
         alt=""
         aria-hidden="true"
         className="absolute -top-4 -left-4 w-24 md:w-36 lg:w-44 pointer-events-none select-none rounded-none"
       />
       <img
-        src={cocktails}
+        src={illustrations.cocktails}
         alt=""
         aria-hidden="true"
         className="absolute -bottom-4 right-4 md:right-12 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "../animations";
-import tileOranges from "../assets/illustrations/IMG_7089.png";
+import { illustrations } from "../constants";
 
 const Details = () => {
   return (
@@ -12,10 +12,17 @@ const Details = () => {
       viewport={{ once: true }}
     >
       <img
-        src={tileOranges}
+        src={illustrations.lobster}
         alt=""
         aria-hidden="true"
-        className="absolute -bottom-4 -right-4 w-28 md:w-40 lg:w-52 pointer-events-none select-none rounded-none"
+        className="absolute top-50 left-0 md:left-8 lg:left-16 w-24 md:w-36 lg:w-48 pointer-events-none select-none "
+      />
+
+      <img
+        src={illustrations.tower}
+        alt=""
+        aria-hidden="true"
+        className="absolute bottom-0 -right-4 w-28 md:w-40 lg:w-52 pointer-events-none select-none rounded-none"
       />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -23,7 +30,7 @@ const Details = () => {
           Itinerario
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="space-y-12">
           <motion.div variants={fadeUp}>
             <h3 className="mb-4">Preboda</h3>
             <p>Septiembre 10</p>
