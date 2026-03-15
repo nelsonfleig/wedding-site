@@ -71,7 +71,7 @@ const OurStory = () => {
         src={illustrations.cocktails}
         alt=""
         aria-hidden="true"
-        className="absolute bottom-0 right-0 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"
+        className="absolute bottom-0 left-0 w-16 md:w-24 lg:w-32 pointer-events-none select-none rounded-none"
       />
       <section className="max-w-4xl mx-auto px-6 py-20 relative z-10">
         <motion.h2

@@ -15,7 +15,7 @@ const Footer = () => {
         className="absolute -bottom-3 -right-4 w-20 md:w-28 lg:w-36 pointer-events-none select-none rounded-none"
       />
 
-      <p>Made with 💙 for our wedding</p>
+      <p>Hecho con mucho ❤️ para nuestra boda</p>
     </footer>
   );
 };

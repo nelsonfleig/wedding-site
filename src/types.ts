@@ -12,7 +12,6 @@ export interface RsvpSubmission {
   name: string;
   attending: "yes" | "no";
   guestCount: number;
-  dietary: string;
   message: string;
 }
 

@@ -18,7 +18,6 @@ const RSVP = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [attending, setAttending] = useState<"yes" | "no" | null>(null);
   const [guestCount, setGuestCount] = useState(1);
-  const [dietary, setDietary] = useState("");
   const [message, setMessage] = useState("");
 
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -32,7 +31,9 @@ const RSVP = () => {
         setState("form");
       })
       .catch(() => {
-        setErrorMsg("Could not load guest list. Please try again later.");
+        setErrorMsg(
+          "No se pudo cargar la lista de invitados. Por favor, inténtalo de nuevo más tarde.",
+        );
         setState("error");
       });
   }, []);
@@ -61,7 +62,6 @@ const RSVP = () => {
     setDropdownOpen(false);
     setAttending(null);
     setGuestCount(1);
-    setDietary("");
     setMessage("");
   };
 
@@ -70,7 +70,6 @@ const RSVP = () => {
     setSearch("");
     setAttending(null);
     setGuestCount(1);
-    setDietary("");
     setMessage("");
     setState("form");
   };
@@ -84,7 +83,6 @@ const RSVP = () => {
       name: selectedGuest.name,
       attending,
       guestCount: attending === "yes" ? guestCount : 0,
-      dietary: attending === "yes" ? dietary : "",
       message,
     };
 
@@ -98,11 +96,11 @@ const RSVP = () => {
       if (data.status === "success") {
         setState("success");
       } else {
-        setErrorMsg(data.message || "Something went wrong.");
+        setErrorMsg(data.message || "Algo salió mal.");
         setState("form");
       }
     } catch {
-      setErrorMsg("Could not submit RSVP. Please try again.");
+      setErrorMsg("No se pudo enviar el RSVP. Por favor, inténtalo de nuevo.");
       setState("form");
     }
   };
@@ -111,7 +109,7 @@ const RSVP = () => {
 
   return (
     <motion.section
-      className="relative py-20 px-6 overflow-hidden"
+      className="relative py-20 px-6 min-h-125"
       variants={stagger}
       initial="hidden"
       whileInView="show"
@@ -133,7 +131,7 @@ const RSVP = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-gray-400"
           >
-            Loading guest list…
+            Cargando lista de invitados…
           </motion.p>
         )}
 
@@ -157,14 +155,8 @@ const RSVP = () => {
             className="space-y-6"
           >
             <p className="text-lg">
-              Thank you, {selectedGuest?.name}! Your RSVP has been received.
+              ¡Gracias, {selectedGuest?.name}! Tu RSVP ha sido recibido.
             </p>
-            <button
-              onClick={resetForm}
-              className="px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
-            >
-              Update RSVP
-            </button>
           </motion.div>
         )}
 
@@ -193,7 +185,7 @@ const RSVP = () => {
             {/* Guest search dropdown */}
             <div ref={dropdownRef} className="relative">
               <label className="block text-sm font-medium mb-1">
-                Find your name
+                Busca tu nombre
               </label>
               <input
                 type="text"
@@ -207,7 +199,7 @@ const RSVP = () => {
                   }
                 }}
                 onFocus={() => setDropdownOpen(true)}
-                placeholder="Start typing your name…"
+                placeholder="Empieza buscando tu nombre..."
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
                 disabled={state === "submitting"}
               />
@@ -222,7 +214,7 @@ const RSVP = () => {
                   >
                     {filteredGuests.length === 0 ? (
                       <li className="px-4 py-3 text-gray-400">
-                        No guests found
+                        No se encontraron invitados
                       </li>
                     ) : (
                       filteredGuests.map((guest) => (
@@ -234,7 +226,7 @@ const RSVP = () => {
                           <span>{guest.name}</span>
                           {guest.hasResponded && (
                             <span className="text-xs text-gray-400">
-                              Responded
+                              Respondido
                             </span>
                           )}
                         </li>
@@ -256,7 +248,7 @@ const RSVP = () => {
                 >
                   <div>
                     <label className="block text-sm font-medium mb-2">
-                      Will you be attending?
+                      ¿Asistirás?
                     </label>
                     <div className="flex gap-3">
                       <button
@@ -269,7 +261,7 @@ const RSVP = () => {
                             : "border-gray-300 hover:bg-gray-100"
                         }`}
                       >
-                        Joyfully Accept
+                        Claro que si 🥳
                       </button>
                       <button
                         type="button"
@@ -281,7 +273,7 @@ const RSVP = () => {
                             : "border-gray-300 hover:bg-gray-100"
                         }`}
                       >
-                        Regretfully Decline
+                        No podré asistir 😞
                       </button>
                     </div>
                   </div>
@@ -295,7 +287,7 @@ const RSVP = () => {
                         exit={{ opacity: 0, height: 0 }}
                       >
                         <label className="block text-sm font-medium mb-2">
-                          Number of guests
+                          Número de invitados
                         </label>
                         <div className="flex gap-2">
                           {Array.from(
@@ -321,38 +313,15 @@ const RSVP = () => {
                     )}
                   </AnimatePresence>
 
-                  {/* Dietary restrictions (only if attending) */}
-                  <AnimatePresence>
-                    {attending === "yes" && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                      >
-                        <label className="block text-sm font-medium mb-1">
-                          Dietary restrictions
-                        </label>
-                        <textarea
-                          value={dietary}
-                          onChange={(e) => setDietary(e.target.value)}
-                          placeholder="Any allergies or dietary needs…"
-                          rows={2}
-                          disabled={state === "submitting"}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
-                        />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
                   {/* Message (always shown once guest is selected) */}
                   <div>
                     <label className="block text-sm font-medium mb-1">
-                      Message for the couple
+                      Mensaje para los novios
                     </label>
                     <textarea
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Share your wishes…"
+                      placeholder="Acompañantes, restricciones dietéticas, canciones para el DJ o cualquier otro mensaje"
                       rows={3}
                       disabled={state === "submitting"}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 resize-none"
@@ -372,7 +341,7 @@ const RSVP = () => {
                           : "bg-gray-200 text-gray-400 cursor-not-allowed"
                       }`}
                     >
-                      {state === "submitting" ? "Sending…" : "Send RSVP"}
+                      {state === "submitting" ? "Enviando…" : "Enviar RSVP"}
                     </motion.button>
                   </div>
                 </motion.div>
