@@ -5,7 +5,7 @@ import { illustrations } from "../constants";
 const Invitation = () => {
   return (
     <motion.section
-      className="relative max-w-3xl mx-auto px-6 py-24 text-center"
+      className="relative max-w-3xl mx-auto px-6 py-24 pb-40 text-center"
       variants={stagger}
       initial="hidden"
       whileInView="show"
