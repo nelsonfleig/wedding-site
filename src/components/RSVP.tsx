@@ -19,6 +19,7 @@ const RSVP = () => {
   const [attending, setAttending] = useState<"yes" | "no" | null>(null);
   const [guestCount, setGuestCount] = useState(1);
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -67,6 +68,11 @@ const RSVP = () => {
 
   const handleSubmit = async () => {
     if (!selectedGuest || attending === null) return;
+
+    if (honeypot) {
+      setState("success");
+      return;
+    }
 
     setState("submitting");
 
@@ -321,6 +327,14 @@ const RSVP = () => {
 
                   {/* Submit button */}
                   <div className="text-center">
+                    <input
+                      type="text"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                      className="absolute opacity-0 pointer-events-none"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
                     <motion.button
                       whileHover={canSubmit ? { scale: 1.02 } : {}}
                       whileTap={canSubmit ? { scale: 0.98 } : {}}
